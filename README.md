@@ -2,7 +2,7 @@
 
 Предпологаеться что имееться установленый symfony 3.*
 
-Добавить записи в composer.json
+Добавить записи в composer.json и выполнить composer install
 ```json
 // composer.json
 {
