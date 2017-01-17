@@ -1,0 +1,6 @@
+# перенаправление всех запросов
+route.proxy:
+    path:      /{route}
+    defaults:  { _controller: controller.proxy:defaultAction }
+    requirements:
+        route: ".+"

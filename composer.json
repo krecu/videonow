@@ -1,0 +1,27 @@
+{
+  "name": "krecu/videonow",
+  "type": "symfony-bundle",
+  "description": "VideoNow examination",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Krecu Eugen",
+      "email": "krecu.me@ya.ru"
+    }
+  ],
+  "require": {
+    "symfony/symfony": "3.2.*",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "replace": {
+    "krecu/videonow": "self.version"
+  },
+  "suggest": {
+    "symfony/framework-bundle": "To use this lib as a full Symfony Bundle and to use the profiler data collector"
+  },
+  "autoload": {
+    "psr-4": {
+      "VideoNowBundle\\": ""
+    }
+  }
+}

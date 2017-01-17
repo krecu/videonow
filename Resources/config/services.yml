@@ -1,0 +1,19 @@
+services:
+
+    # делаем контроллер сервисом, так удобнее инжектить что либо
+    controller.proxy:
+        class: Krecu\VideoNow\ThBundle\Controller\ProxyController
+
+    # определяем сервис
+    service.proxy:
+        class: Krecu\VideoNow\ThBundle\Service\ProxyService
+        arguments:
+          - "%video_now.routing%"
+
+    # добавлем прослушку на выюор контролера
+    event_listener.proxy:
+        class: Krecu\VideoNow\ThBundle\EventListener\ProxyEventListener
+        arguments:
+          - "@service.proxy"
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
