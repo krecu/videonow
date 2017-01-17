@@ -24,6 +24,15 @@
 new VideoNowBundle\VideoNowBundle(),
 ```
 
+Добавить rout
+```yml
+// app/config/routing.yml
+video_now:
+    resource: "@VideoNowBundle/Resources/config/routing.yml"
+    prefix:   /
+
+```
+
 ## Настройка ##
 Добавьте запись `video_now` в config.yml
 
